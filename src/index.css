@@ -1,13 +1,433 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+main {
+  min-height: 100vh;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 3rem;
+  opacity: 0.7;
+}
+/* ----------------Navbar------------------ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 2rem;
+  align-items: center;
+  box-shadow: 2px 2px 8px rgb(233, 229, 229);
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  grid-gap: 2rem;
+}
+nav a {
+  color: black;
+}
+.nav-right > ul {
+  display: flex;
+  grid-gap: 2rem;
+  opacity: 0.7;
+}
+.nav-right > ul > li {
+  cursor: pointer;
+}
+.burger {
+  position: absolute;
+  top: 1.3rem;
+  right: 2rem;
+  display: none;
+}
+.burger > .logo {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/* ----------------Navbar------------------ */
+/* ----------------Footer------------------ */
+.footer {
+  box-shadow: 2px 2px 8px rgb(145, 142, 142);
+}
+.footer > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer > ul > li {
+  padding: 1rem 2.1rem;
+}
+.footer > ul > li > h1 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  padding: 1.5rem 0;
+  font-weight: 540;
+}
+.footer > ul > li > p {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.07rem 0;
+  opacity: 0.7;
+}
+.company > p {
+  line-height: 1.4rem;
+}
+.footer > ul > li > div {
+  display: grid;
+  grid-template-columns: 1fr 7rem;
+  border: 1px solid gray;
+}
+.footer > ul > li > div > input {
+  padding: 0.6rem;
+  border: none;
+  outline: none;
+}
+.footer > ul > li > div > label {
+  padding: 0.8rem;
+  background-color: rgb(42, 42, 105);
+  color: #fff;
+  font-size: 0.9rem;
+}
+.footer > div {
+  padding: 3rem 2.1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.footer > div > div > p {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  opacity: 0.7;
+}
+.cad {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  border: 1px solid rgb(194, 184, 184);
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}
+/* ----------------Footer------------------ */
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ----------------Products------------------ */
+.products {
+  padding: 1rem 2.1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+}
+.product {
+  cursor: pointer;
+  width: 100%;
+  height: 450px;
+  box-shadow: 2px 2px 8px gray;
+  border-radius: 0.7rem;
+}
+.product-img {
+  width: 100%;
+  height: 300px;
+}
+.product-img > img {
+  width: 100%;
+  height: 100%;
+}
+.product-details {
+  padding: 1rem 0.5rem;
+  letter-spacing: 1px;
+  line-height: 1.2rem;
+  color: black;
+  opacity: 0.7;
+}
+.product-details > h1 {
+  font-size: 0.8rem;
+}
+.product-details > p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+/* ----------------Products------------------ */
+/* ----------------Product Detail------------------ */
+.product-detail {
+  padding: 1rem 2.1rem;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-gap: 2rem;
+}
+.product-detail > div > img {
+  width: 100%;
+  height: 25rem;
+}
+.detail > h1 {
+  opacity: 0.7;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.detail > p {
+  opacity: 0.7;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.detail > button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1.3rem;
+  border: none;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+/* ----------------Product Detail------------------ */
+/* ----------------Login------------------ */
+.login {
+  display: flex;
+  justify-content: center;
+}
+.login > form {
+  width: 500px;
+  box-shadow: 2px 2px 8px gray;
+  padding: 1rem 2rem;
+  margin: 3rem 1rem;
+  border-radius: 0.4rem;
+}
+.login > form > h1 {
+  font-size: 2.5rem;
+  opacity: 0.7;
+  margin: 1rem 0;
+  text-align: center;
+}
+.login > form > p {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+  opacity: 0.7;
+  margin-top: 1.5rem;
+}
+.login > form > div > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1.5rem;
+}
+.login > form > div > div > label {
+  font-weight: 700;
+  opacity: 0.7;
+}
+.login > form > div > div > input {
+  padding: 0.6rem 0.8rem;
+  border: none;
+  box-shadow: 2px 2px 8px gray;
+  border-radius: 0.4rem;
+  margin-top: 0.5rem;
+  outline: none;
+}
+.login > form > div > p {
+  margin: 0.5rem 0;
+  font-size: 0.7rem;
+  color: rgb(14, 14, 170);
+  cursor: pointer;
+}
+.login > form > div > button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  border: 2px solid rgb(87, 83, 83);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto;
+}
+.login > form > div > .not {
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  opacity: 0.7;
+  font-weight: 700;
+  margin: 1rem;
+}
+.login > form > div > ul {
+  display: flex;
+  justify-content: space-between;
+}
+.login > form > div > ul button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  border: 2px solid rgb(87, 83, 83);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto;
+}
+.login > form > div > ul a {
+  color: black;
+  opacity: 0.7;
+}
+/* ----------------Login------------------ */
+/* ----------------Signup------------------ */
+.signup {
+  display: flex;
+  justify-content: center;
+  margin: 0 1rem;
+}
+.signup > form {
+  width: 600px;
+  box-shadow: 2px 2px 8px gray;
+  margin: 3rem 1rem;
+  border-radius: 0.4rem;
+}
+.signup > form > h1 {
+  font-size: 2.5rem;
+  opacity: 0.7;
+  margin: 1rem 0;
+  text-align: center;
+}
+.div-top,
+.div-bottom {
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin: 2rem 0;
+}
+.div-top > div,
+.div-bottom > div {
+  display: flex;
+  grid-gap: 0.6rem;
+  flex-direction: column;
+}
+.div-top > div > label,
+.div-bottom > div > label {
+  font-size: 0.8rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+.signup input {
+  padding: 0.4rem;
+  border: none;
+  box-shadow: 2px 2px 8px rgb(172, 169, 169);
+  outline: none;
+  border-radius: 0.4rem;
+}
+.signup span {
+  color: red;
+}
+.signup > form > p {
+  text-align: right;
+  margin-right: 2rem;
+  letter-spacing: 1px;
+  color: #333;
+}
+.signup > form button {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  border: 2px solid rgb(87, 83, 83);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto;
+}
+/* ----------------Signup------------------ */
+/* ----------------home------------------ */
+.home-top div {
+  width: 100%;
+}
+.home-top div img {
+  object-fit: cover;
+  object-position: center center;
+  min-width: 100%;
+  height: 60vh;
+}
+.home-bottom{
+  padding: 4rem 0;
+}
+.home-bottom>button{
+  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  border: 2px solid rgb(87, 83, 83);
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: block;
+  margin: 1.5rem auto;
+}
+.home-bottom>button>a{
+  color: #333;
+}
+/* ----------------home------------------ */
+@media only screen and (max-width: 1000px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer > ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+  .product-detail > div > img {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .footer > ul {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .burger {
+    display: block;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-right ul {
+    margin-top: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-right ul > li {
+    display: block;
+    text-align: center;
+  }
+  .v-res {
+    display: none;
+  }
+  .div-top,
+  .div-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login > form > div > ul {
+    flex-direction: column;
+  }
+  .login > form > div > ul button {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .login > form {
+    padding: 0 1rem;
+  }
+  .login > form > h1 {
+    font-size: 2rem;
+  }
+  .login > form > p {
+    font-size: 1.5rem;
+  }
 }
